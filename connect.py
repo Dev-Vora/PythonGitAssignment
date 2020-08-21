@@ -16,9 +16,7 @@ class myconnect:
       def display(self):
             id = int(input("enter the emp id"))
             conn = sqlite3.connect('emp.db')
-            data = conn.execute('select *from Employee where id = ?', (id,))
-            # data = conn.execute('select *from Employee')
-            # data = conn.execute('drop table Employee')
+            data = conn.execute('select *from Employee where id = ?', (id,))           
             flag = 0
             for row in data:
                   flag = 1
